@@ -10,7 +10,5 @@ import scala.scalanative.build._
 
 // defaults set with common options shown
 nativeConfig ~= { c =>
-  c.withLTO(LTO.none) // thin
-    .withMode(Mode.debug)
-    .withGC(GC.immix) // commix
+  c.withDebugMetadata(true)
 }

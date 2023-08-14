@@ -9,5 +9,5 @@ jobs:
     - uses: olafurpg/setup-scala@v11
     - name: Run
       env:
-        SCALANATIVE_MODE: release-fast
+        SCALANATIVE_OPTIMIZE: false
       run: sbt run
