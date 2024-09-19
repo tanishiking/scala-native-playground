@@ -1,4 +1,4 @@
-scalaVersion := "3.3.0"
+scalaVersion := "3.5.0"
 
 enablePlugins(ScalaNativePlugin)
 
@@ -10,5 +10,5 @@ import scala.scalanative.build._
 
 // defaults set with common options shown
 nativeConfig ~= { c =>
-  c.withDebugMetadata(true)
+  c.withSourceLevelDebuggingConfig(_.enableAll).withDump(true)
 }
